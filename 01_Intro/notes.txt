@@ -60,5 +60,11 @@ Multiple comparison problem: one model can get particularly lucky. This can happ
 ================================================================
 Session 1.7
 Numpy
-
- 
+Refer to jupyter Notebook
+=================================================================
+Session 1.8 Linear Algebra Refresher
+=================================================================
+Plan:
+1. Vector operations: addition
+2. Multiplication: vector-vector multiplication (dot product as in a vector, matrix-vector multiplication, matrix-matrix multiplication
+3. Matrix Inverse
