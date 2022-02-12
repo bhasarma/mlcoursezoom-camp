@@ -1,2 +1,2 @@
 # mlcoursezoom-camp
-This repositry contains coding done as part of ML zoom-camp course.  
+This repositry contains projects and homework done as part of ML zoom-camp course.  
