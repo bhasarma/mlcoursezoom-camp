@@ -1,0 +1,65 @@
+YT link:
+https://www.youtube.com/watch?v=Crm_5n4mvmg&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=3
+===========================
+Git-hub link:
+https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/01-intro/01-what-is-ml.md
+===========================
+Link for slide: https://www.slideshare.net/AlexeyGrigorev/ml-zoomcamp-11-introduction-to-machine-learning
+==========================
+Machine Learning Zoomcamp
+Session #1.1
+Introduction to Machine Learning
+
+Predicting the price of a car
+Features: 
+Target: what we want to predict
+How machine Learning is used to predict the price of a car? 
+Meaning of various terms are relavant.
+==============================
+Session 1.2
+https://www.youtube.com/watch?v=CeukwyUdaz8&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=3
+
+Machine Learning Vs. Rule Based system in the context of a spam detection for emails
+
+how to do feature detection
+Defining Rules for a spam email
+
+Prediction and confidence level
+===============================
+Session 1.3 Supervised Learning
+https://www.youtube.com/watch?v=j9kcEuGcC2Y&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=4
+
+All examples of price prediction, churn prediction are examples of supervised learning.
+We talk abou different types of supervised machine learning: regression, classification, ranking etc. 
+
+What is Supervised learning?
+
+Feature matrix : X
+Car Price problem is a regression probem
+Any prediction not only price of a car, cost of a house are all regression problem.
+
+CLASSIFICATION PROBLEM: Multiclass and Binary
+We don't output a number, but predict a category. For example image classification of cats, dogs etc. For two, there is a subtype of classification problem called as binary classification problem.
+
+Ranking problem: we will not talk much about it.e.g. amazon or ebay, pr ecommerce website such as olx website, google search page 
+Binary classification is the most needed and used ML technique
+==============================================================
+1.4 CRISP-DM ML process
+CRISP-DM = Cross Industry Standard Processing for Data Mining is a methodology that talks about how a machine learning project should be organized.
+We will talk about from problem statement to deployment. There are 6 steps.
+We will our standard spam example.
+CRSIP: 
+1. what business problem we want to solve? Do we ML at all? 'Sometimes, when we have a hammer, everything looks like a nail.'
+Modelling: which model to choose, 1. Logistic regression, 2. Decision tree,3. Random forest, 4. Neural Network, 4. Or many others. 
+==============================================================
+ Session 1.5 
+Modelling step: Model selection
+How to select the suitable model?
+Training Dataset+ Validation dataset = Total dataset
+Multiple comparison problem: one model can get particularly lucky. This can happen in ML a lot. To guard against this, we take another 20% of data for testing. So 60, 20, 20 for training, validation and testing.
+================================================================
+Session 1.7
+Numpy
+
+ 
+
