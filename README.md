@@ -1,2 +1,2 @@
-# mlcoursezoom-camp
-This repositry contains projects and homework done as part of ML zoom-camp course.  
+# Machine Learning Course Zoomcamp
+This repositry contains notebooks, homeworks and projects done as part of the course MLZOOMCAMP by Alexey. 
