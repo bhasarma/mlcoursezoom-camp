@@ -1,9 +1,19 @@
 # Gloassary
 
 
-##A
+## A <br>
 Here comes words with As
 
 
 
-##B
+## B<br>
+
+
+
+
+
+
+
+## C<br>
+
+`Categorical Variable`
