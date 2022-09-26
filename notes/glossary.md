@@ -49,12 +49,17 @@ One-Hot Encoding
 ## P<br>
 
 Pandas
-
+Precision<br>
 ## R <br>
 
-Random seed
+Random seed<br>
+
+Recall<br>
+
 Regression
 Risk Ratio
+ROC curves
+
 ## S<br>
 
 Scikit-learn
