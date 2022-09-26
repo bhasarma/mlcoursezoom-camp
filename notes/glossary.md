@@ -7,19 +7,13 @@ Accuracy
 Binary Classification
 ## C<br>
 Categorical Variable
-
 Churn Prediction
-
 Churn Rate
 Class Imbalance
-
 Classification Problem
 Confusion Table
-
 Correlation
-
 Correlation Coefficient
-
 ## D<br>
 Data Preparation
 
