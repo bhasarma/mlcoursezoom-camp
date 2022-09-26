@@ -7,29 +7,45 @@ Accuracy
 Binary Classification
 ## C<br>
 Categorical Variable
+
 Churn Prediction
+
 Churn Rate
+Class Imbalance
+
 Classification Problem
+Confusion Table
+
 Correlation
+
 Correlation Coefficient
+
 ## D<br>
 Data Preparation
+
 DictVectorizer
 ## E<br>
 
 Exploratory Data Analysis (EDA)
 ## F<br>
 Feature
+
 Feature Importance
+
 Feature Importance Analysis
 ## L<br>
 Linear Regression
+
 Logistic Regression
 ## M<br>
 Matplotlib
-Model Interpretation
+
+Model Interpretation 
+
 Model Coefficients
+
 Multiclass Classification
+
 Mutual Information
 ## N<br>
 Numerical Variable
@@ -57,7 +73,9 @@ Test
 Train
 ## V<br>
 Validation
+
 Validation Framework
+
 Variables
 
 
