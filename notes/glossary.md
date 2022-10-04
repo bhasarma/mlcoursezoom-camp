@@ -2,53 +2,53 @@
 
 
 ## A <br>
-Accuracy
+Accuracy<br>
 ## B<br>
-Binary Classification
+Binary Classification<br>
 ## C<br>
-Categorical Variable
-Churn Prediction
-Churn Rate
-Class Imbalance
-Classification Problem
-Confusion Table
-Correlation
-Correlation Coefficient
+Categorical Variable<br>
+Churn Prediction<br>
+Churn Rate<br>
+Class Imbalance<br>
+Classification Problem<br>
+Confusion Table<br>
+Correlation<br>
+Correlation Coefficient<br>
 ## D<br>
-Data Preparation
+Data Preparation<br>
 
-DictVectorizer
+DictVectorizer<br>
 ## E<br>
 
-Exploratory Data Analysis (EDA)
+Exploratory Data Analysis (EDA)<br>
 ## F<br>
-Feature
+Feature<br>
 
-Feature Importance
+Feature Importance<br>
 
-Feature Importance Analysis
+Feature Importance Analysis<br>
 ## L<br>
-Linear Regression
+Linear Regression<br>
 
-Logistic Regression
+Logistic Regression<br>
 ## M<br>
-Matplotlib
+Matplotlib<br>
 
-Model Interpretation 
+Model Interpretation <br>
 
-Model Coefficients
+Model Coefficients<br>
 
-Multiclass Classification
+Multiclass Classification<br>
 
-Mutual Information
+Mutual Information<br>
 ## N<br>
-Numerical Variable
-Numpy
+Numerical Variable<br>
+Numpy<br>
 ## O<br>
-One-Hot Encoding
+One-Hot Encoding<br>
 ## P<br>
 
-Pandas
+Pandas<br>
 Precision<br>
 ## R <br>
 
@@ -56,26 +56,26 @@ Random seed<br>
 
 Recall<br>
 
-Regression
-Risk Ratio
-ROC curves
+Regression<br>
+Risk Ratio<br>
+ROC curves<br>
 
 ## S<br>
 
-Scikit-learn
-Seaborn
-Sigmoid function
-Sparse Matrix
+Scikit-learn<br>
+Seaborn<br>
+Sigmoid function<br>
+Sparse Matrix<br>
 ## T<br>
 
-Test
-Train
+Test<br>
+Train<br>
 ## V<br>
-Validation
+Validation<br>
 
-Validation Framework
+Validation Framework<br>
 
-Variables
+Variables<br>
 
 
 	note: only WEEK-03 videos are glossarised
