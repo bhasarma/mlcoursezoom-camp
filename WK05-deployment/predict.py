@@ -1,4 +1,6 @@
-
+'''
+just run with `python predict.py` to predict score of the customer in this script.
+'''
 import pickle
 
 

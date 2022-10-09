@@ -1,3 +1,7 @@
+'''
+Here we take predict.py and create a churn service (web-service) using flask
+'''
+
 import pickle
 
 from flask import Flask
