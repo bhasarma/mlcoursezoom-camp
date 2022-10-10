@@ -1,6 +1,7 @@
 # predict.py
-# Homework 05 | Question 4
-# let's serve the model as a webservice using Flask
+# Homework 05 | Question 4 and Question 6
+# let's serve the model as a webservice using Flask- Q5
+# using Docker -Q6
 
 
 import pickle
@@ -10,7 +11,8 @@ from flask import request
 from flask import jsonify
 
 
-model_file = 'model1.bin' 
+#model_file = 'model1.bin'
+model_file = 'model2.bin' 
 dict_vect_file = 'dv.bin'
 
 with open(model_file,'rb') as f_in: 
