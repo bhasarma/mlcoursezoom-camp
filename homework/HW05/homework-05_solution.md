@@ -1,4 +1,15 @@
-# hw05
+# Homework 05 | WEEK 05 (04.10-10.10.2022) | Machine Learning Zoomcamp
+
+Linke to the homework [here](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/cohorts/2022/05-deployment/homework.md)
+
+## Dataset 
+
+* same credit card dataset as in the previous homework
+* Credit Card Data from book "Econometric Analysis".
+* Here's a wget able link:
+```{bash}
+wget https://raw.githubusercontent.com/alexeygrigorev/datasets/master/AER_credit_card_data.csv
+```
 
 ## Question 1
 
@@ -6,11 +17,12 @@
 * What's the version of pipenv you installed?
 * Use `--version` to find out
 
-![Imgur](https://i.imgur.com/DTRi60e.png)
-figure 1. `pipenv`is installed on `base` environment in the directory `~/GitHub/mlcoursezoom-camp/homework/HW05$`. At this point, I don't know 1. if it matters, in which diretory I do the installation and 2. if I can have another python virtual environment in conda environment.
-
 ![Imgur](https://i.imgur.com/8iYJHtX.png)
- figure 2: version of `pipenv` installed is `2022.10.4`
+ **Figure 1**: `pipenv` installed and its ersion is `2022.10.4`
+ 
+ **Answer to question 1**
+ 
+ `2022.10.4`
  
 ## Question 2
 
@@ -20,11 +32,11 @@ figure 1. `pipenv`is installed on `base` environment in the directory `~/GitHub/
 Note: you should create an empty folder for homework and do it there.
 
 ![Imgur](https://i.imgur.com/xRzo7jp.png)
-figure 3: pipenv is used to install Scikit-Learn version 1.0.2 using the command `pipenv install scikit-learn==1.0.2`.
+**Figure 2**: pipenv is used to install Scikit-Learn version 1.0.2 using the command `pipenv install scikit-learn==1.0.2`.
 
 **Answer to question 2**
-first hash for scikit-learn we get in `Pipfile.lock` is `"sha256": "c71abaddf023d2d7029f36beec9b8afb73c91860ff0002758fa66f8ea365dad0"`
-***
+First hash for scikit-learn we get in `Pipfile.lock` is `"sha256": "c71abaddf023d2d7029f36beec9b8afb73c91860ff0002758fa66f8ea365dad0"`
+
 
 ## Models
 We've prepared a dictionary vectorizer and a model.
@@ -76,6 +88,7 @@ $ md5sum model1.bin dv.bin
 6b7cded86a52af7e81859647fa3a5c2e  dv.bin
 ```
 Solution:
+
 ```{python}
 # write a script for loading models with pickle
 # q3.py
@@ -99,7 +112,7 @@ print('churn probability', y_pred)
 
 ```
 ![Imgur](https://i.imgur.com/eajHHNE.png)
-**Figure**: output of q3.py
+**Figure3**: output of q3.py
 
 **Answer to question 3**
 `0.162`
@@ -128,7 +141,7 @@ What's the probability that this client will get a credit card?
 Solution:
 
 ![Imgur](https://i.imgur.com/0PTB9Vp.png)
-**Figure**: installation of flask and gunicorn 
+**Figure4**: installation of flask and gunicorn 
 
 ** Flask code for serving the model**
 
@@ -187,9 +200,10 @@ or in one line,
 `pipenv run gunicorn --bind 0.0.0.0:9696 predict:app`
 
 ![Imgur](https://i.imgur.com/d2XTlPJ.png)
-
+**Figure 5**: 
 
 ![Imgur](https://i.imgur.com/6m3G8pu.png)
+**Figure 6**: 
 
 ```{python}
 #predict-test.py
@@ -261,11 +275,28 @@ Solution:
 * Then typed `sudo docker images` on the same directory as above and got the following output.
 
 ![Imgur](https://i.imgur.com/xL2b3T2.png)
+**figure 7**:
 
 **Answer to question 5**
 
 `125 MB`
 ***
+
+## Dockerfile
+Now create your own Dockerfile based on the image we prepared.
+
+It should start like that:
+```{dockerfile}
+FROM svizor/zoomcamp-model:3.9.12-slim
+# add your stuff here
+
+```
+Now complete it:
+
+* Install all the dependencies form the Pipenv file
+* Copy your Flask script
+* Run it with Gunicorn
+* After that, you can build your docker image.
 
 ## Question 6
 
@@ -313,17 +344,17 @@ ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
 
 ![Imgur](https://i.imgur.com/ppSqCwm.png)
 
-**Figure**: Building docker images after completing the `Dockerfile`
+**Figure8**: Building docker images after completing the `Dockerfile`
 
 * step2:  `sudo docker run -it --rm -p 9696:9696 svizor/zoomcamp-model` on same dir. as in step 1
 
 ![Imgur](https://i.imgur.com/lVjX0zy.png)
-**Figure**: running docker container after building it in step 1 above
+**Figure 9**: running docker container after building it in step 1 above
 
 * step3: `python predict-test.py` on another terminal but in the same directory as in previous steps.
 
 ![Imgur](https://i.imgur.com/i6WrkRO.png)
-**Figure**: output of `predict-test.py` after running docker container as in step 2 above.
+**Figure 10**: output of `predict-test.py` after running docker container as in step 2 above.
 
 **Answer to question 6**
 
