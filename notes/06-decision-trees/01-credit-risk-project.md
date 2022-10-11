@@ -16,7 +16,7 @@ In this module, we want to build a **model** that the bank can use to make the d
 A bank can make a decision based on a customer's information by analyzing informations about all the customers that it already has.  Bank has all the applications from all the customers, all the informations about them, how much money they asked for and which customer was a default and which wasn't. 
 
 ![Imgur](https://i.imgur.com/txc1Jab.png)
-**Figure 2**: sketch of feature matrix $X$ and target variable $y$. $X$ contains informations about customers and $y$ is $0$ or $1$.  $g(x_{i}$ is the model.
+**Figure 2**: sketch of feature matrix $X$ and target variable $y$. $X$ contains informations about customers and $y$ is $0$ or $1$.  $g(X_{i})$ is the model.
 
 
 We want to train a model from the informations / data about the existing customers. For each new customer this model will give us a probabilty of default or no default.  Model $g(X_{i})$ as defined early will give us the probability of default. X is the feature matrix with all the information about the existing customers that the bank has. $y$ is our target variable. Values of y is either $0$ or $1$. $1$ means DEFAULT and $0$ means NO DEFAULT.  Thus it is a binary classification problem.
