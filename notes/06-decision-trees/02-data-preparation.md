@@ -31,7 +31,7 @@ Below is the summary of the operations:
 
 **References**
 
-1. Youtube video for Machine Learning Zoomcamp [LInk](https://www.youtube.com/watch?v=tfuQdI3YO2c&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=58)
+1. Youtube video for Machine Learning Zoomcamp [Link](https://www.youtube.com/watch?v=tfuQdI3YO2c&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=58)
 
 2. Jupyter notebook [Link](https://github.com/bhasarma/mlcoursezoom-camp/blob/main/WK06-decision-trees/WEEK-06-notebook.ipynb)
 
