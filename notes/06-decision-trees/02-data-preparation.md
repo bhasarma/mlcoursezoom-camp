@@ -8,9 +8,9 @@ Below is the summary of the operations:
 
 * made the name of the columns uniform by making all of their letters lower case
 
-* Converted the categorical variables (that were `int64` initially) into strings (`okay`, `default` etc.) using `map()` method
+* converted the categorical variables (that were `int64` initially) into strings (`okay`, `default` etc.) using `map()` method
 
-* Replaced missing values in numerical variables (which were a very large number 99999999) with `NaN` first
+* replaced missing values in numerical variables (which were a very large number 99999999) with `NaN` first
 
 * splitted the dataset into 60/20/20 using `train_test_split` method
 
@@ -19,15 +19,15 @@ Below is the summary of the operations:
 
 **List of new commnads learnt:**
 
-`!head CreditScoring.csv`
+1. `!head CreditScoring.csv`
 
-`df.status = df.status.map(status_values)`
+2. `df.status = df.status.map(status_values)`
 
-`df.income.replace(to_replace = 99999999, value = np.nan)`
+3. `df.income.replace(to_replace = 99999999, value = np.nan)`
 
-`df.status.value_counts()`
+4. `df.status.value_counts()`
 
-`df[df.status != 'unk'].reset_index(drop = True)`
+5. `df[df.status != 'unk'].reset_index(drop = True)`
 
 **References**
 
