@@ -64,4 +64,5 @@
  **References**
 
  1. ML Zoomcamp 7.1 - Intro/Session Overview [youtube link](https://www.youtube.com/watch?v=2viqmJ_NpgE&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=67)
+ 2. [Slides](https://www.slideshare.net/TimLiu72/71-ml-zoom-camp-intro-publicpptx) used in the video. 
   
