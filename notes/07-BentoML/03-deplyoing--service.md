@@ -1,6 +1,6 @@
 ## 7.3 Deploying our prediction sevice
 
-In last module, we looked at building our prediction service. We did that by saving ouu model, packaging it up and deploying it in a bento by creating the end point and then testing it. 
+In last module, we looked at building our prediction service. We did that by saving our model, packaging it up and deploying it in a bento by creating the end point and then testing it. 
 
 In this module we'll look at: 
 
