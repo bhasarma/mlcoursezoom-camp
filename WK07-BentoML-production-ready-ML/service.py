@@ -27,4 +27,11 @@ def classify(application_data):
 	vector = dv.transform(application_data)
 	prediction = model_runner.predict.run(vector)
 	print(prediction)
-	return {"status": "Approved"}
+
+	result = prediction[0]
+	if result > 0.5:
+		return {"status": "DECLINED"}
+	elif result > 0.23:
+		return {"status": "MAYBE"}
+	else:
+		return {"status": "APPROVED"}

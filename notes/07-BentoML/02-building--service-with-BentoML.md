@@ -72,7 +72,16 @@ Then:
 We wrote service.py
 
 Next in terminal:
-``
+```
+$ bentoml serve service.py:svc
+```
+If we don't want to close the previous run manually and want bentoml to run newly edited service.py:
+
+```
+$ bentoml serve service.py:svc --reload
+```
+
+
 
 **References**
 
