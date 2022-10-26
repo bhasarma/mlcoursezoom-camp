@@ -33,23 +33,20 @@ sample = {"seniority": 3,
  "price": 1000
  }
 
+
 class CreditRiskTestUser(HttpUser):
     """
     Usage:
         Start locust load testing client with:
-
             locust -H http://localhost:3000
-
         Open browser at http://0.0.0.0:8089, adjust desired number of users and spawn
         rate for the load test from the Web UI and start swarming.
     """
-
     @task
     def classify(self):
         self.client.post("/classify", json=sample)
 
     wait_time = between(0.01, 2)
-
 ```
 
 To start-up this locust process, we'll call the locust command on terminal:
@@ -82,5 +79,15 @@ So, we are going to do our first optimization. It is `async` way optimization.
 
 Sometimes you might have a high failure at the beginning because of the **cold-start** isuue. 
 
+1. run `bentoml serve --production`
+2. open another terminal and run `locust -H http://localhost:3000`
 
+This works. 
 
+Try with 1 user and 1 user per sec. 
+
+**Optimization 1** `async` : each of these requests are  processed parallely.
+
+**Optimization 2** it fans out processes for service. Multiple CPUs work in parallel.  Read it [here](https://docs.bentoml.org/en/latest/guides/batching.html) to know more about how adaptive batching works.
+
+**Optimization 3** We wrote the `bentoconfiguration.yaml`. But we ddn't run it in the video.
