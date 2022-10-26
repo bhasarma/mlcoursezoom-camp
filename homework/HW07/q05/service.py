@@ -24,7 +24,7 @@ class CreditApplication(BaseModel):
 	price: int
 
 
-model_ref = bentoml.sklearn.get("mlzoomcamp_homework:latest")
+model_ref = bentoml.sklearn.get("mlzoomcamp_homework:qtzdz3slg6mwwdu5")
 #dv = model_ref.custom_objects['dictVectorizer']
   
 
