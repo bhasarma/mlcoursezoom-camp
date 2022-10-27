@@ -46,5 +46,10 @@ Finally after lots of search, I decided to go with the following data:
 ## 1.4 
 
 ## 1.X Ideas for next project:
+In this project I have explored in depth a binary classification problem. I have done EDA throughly, applied regression, decision tree, random forest and xgboost model into this problem, found the best dataset and deployed it in the cloud. In order to continue learning and improving, I should take on the following problems: 
 
-- project involving neural network/ deep learning
+- A multiclassification problem
+- A regression problem
+- a neural network/ deep learning/ computer vision/ problem involving images
+- an NLP problem
+- a very unbalanced dataset e.g. credit card fraud detection
