@@ -15,10 +15,10 @@ This repo contains the project work carried out during the midterm project of on
 
 **About the dataset**
 
-The dataset has 18 features and 45211 columns. 
+The dataset has 18 features and 45211 rows. 
 
 
-|  Feature Names  |             Description             |
+|  Feature Name  |             Description             |
 |:--------:|:-----------------------------------:|
 |    **Id**   |  customer identification number  |
 |    **age**   |  age of the customer |
@@ -34,7 +34,7 @@ The dataset has 18 features and 45211 columns.
 | **month**  |  last contact month of year (categorical: "Jan", "feb", "mar", ...."nov","dec" |
 | **duration**  |  last contact duration in seconds (numeric)  |
 | **campaign**  |  number of contacts performed during this campaign and for this customer (numeric)  |
-| **pdays**  |  number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means that clientl was not previously contacted  |
+| **pdays**  |  number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means that client was not previously contacted  |
 | **previous**  |  number of contacts performed before this campaign and for this customer (numeric)  |
 | **poutcome**  |  outcome of previous marketing campaign (categorical: "unknown", "other", "failure", "success"  |
 | **y**  |  target variable, has the client subscribed to a term deposit product? (binary: "yes","no") |
