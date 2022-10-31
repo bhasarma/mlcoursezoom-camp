@@ -1,21 +1,28 @@
 # ML Zoomcamp Midterm Project
 
-This repo contains the project work carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by Alexey Grigorev and his team from [DataTalks.Club](https://datatalks.club/). 
+This repo contains the peer-reviewed project carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by Alexey Grigorev and his team from [DataTalks.Club](https://datatalks.club/). 
 
-- Link to the course github: 
-[https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp]() 
+- Link to the github repo of the course: 
+[https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) 
 
 - Link to the Youtube Playlist where all course videos are there:
-[https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR]() 
+[https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) 
 
+ 
 
-## Table of Contents
+## Table of Contents:
 
 1. Problem Description
+2. About the Dataset 
+
+
+**Problem Description**
+
+Banks are the most influential financial institutions of our time. They make revenue by selling their products to their customers. Some examples of products of a bank are savings account, credit card, personal loan, house loan etc. In this project, a bank wants to launch a campaign to sell a product called `term-deposit`. This particular bank wants to do a targeted campaign, i.e. they want to call, send an email or post to targeted customers out of lots of customers. Fortunately, we have datas from a previous campaign. This dataset contains demographic and banking information about the customers, that were part of previous campaign and also the outcome of the campaign, i.e. whether they acecepted the product after the campaign or not. In this project, we want to train a model on this dataset in order to predict whether a targeted campaign on a particular customer will be successful or not. This is binary classification problem
 
 **About the dataset**
 
-The dataset has 18 features and 45211 rows. 
+The dataset has 18 features and 45211 rows. Below are the detailed information about the features:
 
 
 |  Feature Name  |             Description             |
