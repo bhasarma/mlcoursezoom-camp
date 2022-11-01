@@ -3,7 +3,7 @@
 
 ## 5.1 Overview
 
-Till week 04, we have trained churn prediction model and we evaluated it. Now we take our trained and evaluated model and deploy it as a web service. This means, we want to take the model, save it and use it. How we want to use it is sketched in figure 1.
+Till week 04, we have trained churn prediction model and we evaluated it. Now we take our trained and evaluated model and deploy it as a **web service**. This means, we want to take the model, save it and use it. How we want to use it is sketched in figure 1.
 
 We have first of all our jupyter notebook. We train and evaluate the model in it. Then we save it to a file `model.bin`. We want to load this file from a different process called **web-service**. Let's call it churn-service for our case. churn-service has the model in it. 
 
