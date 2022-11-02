@@ -47,4 +47,7 @@ The dataset has 18 features and 45211 rows. Below are the detailed information a
 | **y**  |  target variable, has the client subscribed to a term deposit product? (binary: "yes","no") |
 
 
-##
+## Conclusion
+
+- 4 models (logistic regression, decision tree, random forest and XGboost)  were trained on the dataset
+- Best model is: xx with accuracy of xx
