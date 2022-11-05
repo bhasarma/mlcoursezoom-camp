@@ -1,6 +1,6 @@
 # Subscription to Bank Term Deposit Prediction
 
-*"No great marketingdecisions have ever been made on qualitative data" - John Scully (CEO of Apple Inc. 1983-1993)*
+*"No great marketing decisions have ever been made on qualitative data" - John Scully (CEO of Apple Inc. 1983-1993)*
 
 ![Imgur](https://i.imgur.com/qGlDEkY.jpg)
 Photo Credit: Photo by Monstera from Pexels
