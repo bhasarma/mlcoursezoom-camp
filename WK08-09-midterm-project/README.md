@@ -21,31 +21,31 @@ Banks are the most influential financial institutions of our time. They make rev
 
 **About the dataset**
 
-The dataset has 18 features and 45211 rows. Below are the detailed information about the features:
+The dataset has 18 features and 45211 rows. In the table below, meaning of each feature is written
 
 
-|  Feature Name  |             Description             |
-|:--------:|:-----------------------------------:|
-|    **Id**   |  customer identification number  |
-|    **age**   |  age of the customer |
-|    **job**   |  job of the customer |
-|   **marital**   | marital status of the customer |
-| **education** |    education qualification of the customer   |
-| **default** |  whether customer has credit in default  (binary: "yes", "no")  |
-|  **balance**  |  average yearly balance of the customer in Euros  |
-| **housing**  |  whether customer has housing loan (binary: "yes", "no")  |
-| **loan**  |  whether customer has personal loans (binary: "yes", "no")  |
-| **contact**  |  bank's contact communication type with the customer  (categorical : "telephone", "cellular", "unknown")  |
-| **day**  |  last contact day of the month (numeric)  |
-| **month**  |  last contact month of year (categorical: "Jan", "feb", "mar", ...."nov","dec" |
-| **duration**  |  last contact duration in seconds (numeric)  |
-| **campaign**  |  number of contacts performed during this campaign and for this customer (numeric)  |
-| **pdays**  |  number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means that client was not previously contacted  |
-| **previous**  |  number of contacts performed before this campaign and for this customer (numeric)  |
-| **poutcome**  |  outcome of previous marketing campaign (categorical: "unknown", "other", "failure", "success"  |
-| **y**  |  target variable, has the client subscribed to a term deposit product? (binary: "yes","no") |
+|  Feature Name  |             Description             |  Datatype  |
+|:--------:|:-----------------------------------:|:-----------------------------------:|
+|    **Id**   |  customer identification number  |   int    |
+|    **age**   |  age of the customer |    float  | 
+|    **job**   |  job of the customer |    string  |
+|   **marital**   | marital status of the customer | string |
+| **education** |    education qualification of the customer   | string |
+| **default** |  whether customer has credit in default | binary:yes or no| 
+|  **balance**  |average yearly balance of the customer in Euros  |float | 
+| **housing**  |  whether customer has housing loan| binary: yes, no |
+| **loan**  |  whether customer has personal loans | binary: yes, no |
+| **contact**  |  bank's communication type to contact the customer | string: telephone, cellular and unknown |
+| **day***  |  last contact day of the month | int |
+| **month***  |  last contact month of year|  string: jan, feb, mar, ....,nov and dec |
+| **duration**  |  last contact duration in seconds| int |
+| **campaign**  |  number of contacts performed during this campaign with the customer  | int | 
+| **pdays**  |  number of days that passed by after the client was last contacted from a previous campaign (-1 means that client was not previously contacted  | int  |
+| **previous**  |  number of contacts performed before this campaign with the customer | int | 
+| **poutcome**  |  outcome of previous marketing campaign | string: unknown, other, failure and success  |
+| **y**  |  target variable, has the client subscribed to a term deposit product? | binary: yes or no |
 
-
+*In the table above almost all features are self explanatory, except `day` and `month`.  Both the features together mean, last contact date e.g. a `day = 2`, and `month = may` would mean, customer was contacted last on 2nd May. We don't know the year, but it is not relevant for our training. 
 ## Conclusions
 
 - 4 models (logistic regression, decision tree, random forest and XGboost)  were trained on the dataset
