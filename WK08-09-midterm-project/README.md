@@ -1,14 +1,11 @@
-# ML Zoomcamp Midterm Project
+# Subscription to Bank Term Deposit Prediction
 
-This repo contains the peer-reviewed project carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by Alexey Grigorev and his team from [DataTalks.Club](https://datatalks.club/). 
+*"No great marketingdecisions have ever been made on qualitative data" - John Scully (CEO of Apple Inc. 1983-1993)*
 
-- Link to the github repo of the course: 
-[https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) 
+![Imgur](https://i.imgur.com/qGlDEkY.jpg)
+Photo Credit: Photo by Monstera from Pexels
 
-- Link to the Youtube Playlist where all course videos are there:
-[https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) 
-
- 
+This repository contains the project carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by [Alexey Grigorev](https://github.com/alexeygrigorev) and his team from [DataTalks.Club](https://datatalks.club/). This project is 2 weeks long and peer-reviwed.
 
 ## Table of Contents:
 
@@ -47,7 +44,17 @@ The dataset has 18 features and 45211 rows. Below are the detailed information a
 | **y**  |  target variable, has the client subscribed to a term deposit product? (binary: "yes","no") |
 
 
-## Conclusion
+## Conclusions
 
 - 4 models (logistic regression, decision tree, random forest and XGboost)  were trained on the dataset
 - Best model is: xx with accuracy of xx
+
+## References
+
+- [Github repository of the course Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) 
+- [Youtube Playlist where course videos are hosted](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) 
+- [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
+
+## Contacts
+Any feedback, question or suggestion? Feel free to contact me!
+![<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
