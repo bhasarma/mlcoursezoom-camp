@@ -5,15 +5,17 @@
 ![Imgur](https://i.imgur.com/qGlDEkY.jpg)
 Photo Credit: Photo by Monstera from Pexels
 
-This repository contains the project carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by [Alexey Grigorev](https://github.com/alexeygrigorev) and his team from [DataTalks.Club](https://datatalks.club/). This project is 2 weeks long and peer-reviwed.
+This repository contains the project carried out during the midterm project of online course Machine Learning Zoomcamp designed and instructed by [Alexey Grigorev](https://github.com/alexeygrigorev) and his team from [DataTalks.Club](https://datatalks.club/). This project is 2 weeks long and peer-reviewed.
 
 ## Table of Contents:
 
-1. Problem Description
-2. About the Dataset 
+1. Business Problem Description
+2. About the Dataset
+3. Project Workflow
+4. Steps to run the application 
 
 
-**Problem Description**
+**Business Problem Description**
 
 Banks are the most influential financial institutions of our time. They make revenue by selling their products to their customers. Some examples of products of a bank are savings account, credit card, personal loan, house loan etc. In this project, a bank wants to launch a campaign to sell a product called `term-deposit`. This particular bank wants to do a targeted campaign, i.e. they want to call, send an email or post to targeted customers out of lots of customers. Fortunately, we have datas from a previous campaign. This dataset contains demographic and banking information about the customers, that were part of previous campaign and also the outcome of the campaign, i.e. whether they acecepted the product after the campaign or not. In this project, we want to train a model on this dataset in order to predict whether a targeted campaign on a particular customer will be successful or not. This is binary classification problem
 
@@ -58,3 +60,6 @@ The dataset has 18 features and 45211 rows. Below are the detailed information a
 ## Contacts
 Any feedback, question or suggestion? Feel free to contact me!<br>
 [<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
+
+
+If you like the work, consider clicking on the ⭐.
