@@ -56,5 +56,5 @@ The dataset has 18 features and 45211 rows. Below are the detailed information a
 - [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
 
 ## Contacts
-Any feedback, question or suggestion? Feel free to contact me!
+Any feedback, question or suggestion? Feel free to contact me!<br>
 [<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
