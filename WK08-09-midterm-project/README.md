@@ -15,9 +15,9 @@ This repository contains the project carried out during the midterm project of o
 4. Steps to run the application 
 
 
-**Business Problem Description**
+**1. Business Problem Description**
 
-Banks are the most influential financial institutions of our time. They make revenue by selling their products to their customers. Some examples of products of a bank are savings account, credit card, personal loan, house loan etc. In this project, a bank wants to launch a campaign to sell a product called `term-deposit`. This particular bank wants to do a targeted campaign, i.e. they want to call, send an email or post to targeted customers out of lots of customers. Fortunately, we have datas from a previous campaign. This dataset contains demographic and banking information about the customers, that were part of previous campaign and also the outcome of the campaign, i.e. whether they acecepted the product after the campaign or not. In this project, we want to train a model on this dataset in order to predict whether a targeted campaign on a particular customer will be successful or not. This is binary classification problem
+Banks are the most influential financial institutions of our time. They make revenue by selling their products to the customers. Some examples of products from a bank are savings account, credit card, personal loan, house loan etc. A bank (name unknown) wants to launch a campaign to sell a product called `term-deposit`. This particular bank wants to do a targeted campaign, i.e. they want to call, send an email or post to targeted customers, who are likely to buy this product. The goal of this project is to predict whether a customer is likely to buy this product or not.  Fortunately, this bank has datas from a previous campaign. This dataset contains demographic and banking information about customers and also the outcome of the campaign, i.e. whether they subscribed to the product after the campaign or not. In this project, we want to train a model on this dataset in order to predict whether after a targeted campaign, a particular customer will subscribed to the product 'term deposit' or not. Since we want our model to predict yes or no, this is a binary classification problem.
 
 **About the dataset**
 
@@ -58,8 +58,8 @@ The dataset has 18 features and 45211 rows. In the table below, meaning of each 
 - [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
 
 ## Contacts
-Any feedback, question or suggestion? Feel free to contact me!<br>
+Any feedback, question or suggestion? You are welcomed to contact me!<br>
 [<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
 
 
-If you like the work, consider clicking on the ⭐.
+Last but not the least, if you like the work, consider clicking on the ⭐
