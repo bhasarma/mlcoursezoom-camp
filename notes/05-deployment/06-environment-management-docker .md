@@ -1,12 +1,12 @@
 # Environment Management: Docker
 
 ## Why we need docker
-It is a way of managing environments one step above pipenv. 
+It is a way of managing environments one step above pipenv. It lets us isolate our service or, app from the rest in our development machine.
 
 ## Running a python image with docker
 It is a docker image with just python, nothing else in it.
 
-- Got to `hub.docker.com/_/python`. It contains all images of python. It shows all the tags.  
+- Go to `hub.docker.com/_/python`. It contains all images of python. It shows all the tags.  
 
 - Run a image from there with:
 
@@ -49,11 +49,10 @@ ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
 ## Running a docker image locally
 We can run the above image like we did it previously with:
 
-`$ docker run -it --rm --entrypoint=bash zoomcamp-test:latest`
+`$ docker run -it --rm -p 9696:9696 zoomcamp-test:latest`
 
 When we run it we see that, we are inside /app. 
 
-If there is a chnage you made into Dockerfile, then build it again and then you can run it.  
+If there is a chnage we made into Dockerfile, then build it again and then you can run it. 
+`$ docker run -it --rm -p 9696:9696 zoomcamp-test:latest`
 
-
-`$ docker run -it --rm -p 9696:9696 --entrypoint=bash zoomcamp-test:latest`

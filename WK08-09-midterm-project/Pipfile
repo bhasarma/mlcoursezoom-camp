@@ -8,6 +8,7 @@ numpy = "*"
 scikit-learn = "==0.24.2"
 flask = "*"
 gunicorn = "*"
+xgboost = "*"
 
 [dev-packages]
 

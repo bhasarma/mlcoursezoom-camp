@@ -113,12 +113,17 @@ Now if we want to run our webservice:
 1. activate this project's virtualenv, by runnin `pipenv shell`
 2. Then run `gunicorn --bind 0.0.0.0:9696 predict:app`
 
-In stead of running above two, you can also just do `pipenv run gunicorn --bind 0.0.0.0:9696 predict:app`.
+In stead of running above two commands, you can also just write `pipenv run gunicorn --bind 0.0.0.0:9696 predict:app`. It does the same. 
 
 ======
+Clone this repo and after cloning just do `pipenv install`. You are good to go.
+ 
+### Environment Management with Docker
+- build docker file with `docker build -t midterm-project .`
+- run the service with `docker run -it --rm -p 9696:9696 midterm-project:latest`
+- make a request with `python predict-test.py` in another terminal, of course in the same dir where the file is.
 
-Clone this repo and after cloning just do `pipenv install`. You are good togo. 
-**Environment Management with Docker**
+
 
 **Deployment in the cloud with AWS EB**
 
