@@ -125,7 +125,7 @@ Clone this repo and after cloning just do `pipenv install`. You are good to go.
 
 
 
-**Deployment in the cloud with AWS EB**
+**Deploying our docker container to the cloud with AWS EB**
 
 ## Conclusions
 
