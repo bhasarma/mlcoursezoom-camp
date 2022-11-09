@@ -6,9 +6,6 @@ import requests
 host = 'subscription-serving-env.eba-meke3qbg.us-east-1.elasticbeanstalk.com'
 url = f'http://{host}/predict'
 
-#Above two lines are needed if we are running our app on aws_cloud. For local running, below
-#url = 'http://localhost:9696/predict'
-
 
 customer = {
 
