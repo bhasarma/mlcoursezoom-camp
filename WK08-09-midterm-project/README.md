@@ -140,6 +140,8 @@ Clone this repo and after cloning just do `pipenv install`. You are good to go.
 
 ## Contacts
 Any feedback, question or suggestion? You are welcomed to contact me!<br>
+
+
 [<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
 
 
