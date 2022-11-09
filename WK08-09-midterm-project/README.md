@@ -55,7 +55,7 @@ The dataset has 18 features and 45211 rows. In the table below, meaning of each 
 |  File name |      Description       |
 |:--------:|:-----------------------------------:|
 |    **README.md**   |  The file you are reading now, meant for the user containing details about the project| 
-|    **predict-term-deposit-data-csv**   |  Dataset file explained in the previous section |
+|    **predict-term-deposit-data.csv**   |  Dataset file explained in the previous section |
 |    **notebook.ipynb**   |  Jupyter notebook file where all EDA, training different models, hyperparameterization etc. are carried out in development |
 |    **train.py**   |  python script that is converted from `notebook.ipynb` with only core logic and best model in it |
 |    **model.bin**   |  saved model which is obtained as output of `train.py` |
