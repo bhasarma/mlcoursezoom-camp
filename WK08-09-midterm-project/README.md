@@ -125,7 +125,43 @@ Clone this repo and after cloning just do `pipenv install`. You are good to go.
 
 
 
-**Deploying our docker container to the cloud with AWS EB**
+### Deploying the docker container to the cloud with AWS EB
+As the final step, we deploy our docker container built in the previous step to the cloud. We use AWS Elastic Beanstalk for this work.
+
+- if you don't have an account yet in AWS, you can create one by following the instructions in the article [creating an aws account](https://mlbookcamp.com/article/aws). In order to create an account, it asks for credit card information. However we are going to use only the free tier resources for this project.
+
+- create an EC2 instance on AWS following the instructions [here](https://mlbookcamp.com/article/aws-ec2).
+
+- Then install the special CLI for elastic beanstalk `awsebcli` in the pipenv of this project with the following commands in your terminal and in the directory where this project is. In my case it is `(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$`.
+
+command 1: `$ pipenv install awsebcli --dev`
+
+command 2: Enter the pipenv environement with: 
+`$ pipenv shell`
+
+Use the service with the following command: 
+`$ eb init -p docker -r eu-west-1 subscription-serving` 
+
+If it is your first time, then it will ask for your `aws-acccess-id` and `aws-secret-key`. Enter them and wait till it says `Application subscription-serving has been created.`
+
+### Testing if the server works locally
+We can first test, if the server works localy with the command:
+`$ eb local run --port 9696`.
+Test it by going to another terminal and running the script `python predict-test.py`
+
+### Running the web service in the cloud
+Create an elastic beanstalk env by:
+`eb create churn-serving-env`
+
+It takes some time we'll see `Application available at .....address`. We copy this addres. Paste this into predict-test.py 
+
+- run `python predict-test.py` on our terminal and we get our result in the terminal.
+
+**Important:**  For security reasons, we are not running the service anymore. We have taken it down. Below you can see a video-scrennshot of the service running.
+
+[Video link here](https://www.veed.io/view/ae183e54-8ab0-410b-8f22-86d60630d26c?panel=share)
+
+- terminate the service at the end by: `eb terminate subscription-serving-env`
 
 ## Conclusions
 
@@ -139,7 +175,7 @@ Clone this repo and after cloning just do `pipenv install`. You are good to go.
 - [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
 
 ## Contacts
-Any feedback, question or suggestion? You are welcomed to contact me!<br>
+for any feedback, question or suggestion, feel free to contact me below!<br>
 
 
 [<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
