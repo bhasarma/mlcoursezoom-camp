@@ -12,7 +12,7 @@ This repository contains the project carried out during the midterm project of o
 1. Business Problem Description
 2. About the Dataset
 3. About files and folders in this repo
-4. Project Workflow
+4. Development System
 5. How to reproduce the project
 6. Conclusions
 7. References
@@ -81,12 +81,15 @@ In the table below, meaning of each feature is written.
 |    **dev_files**   |  A folder containing files used during development, but no longer relevant for deployment. Helpful to run locally to understand the project |
 
 
-## 4. Project workflow
-
-- Development system: 
+## 4. Development System
+  
    OS: Ubuntu 18.04.6 LTS
+   
    Architecture: x86_64
-   conda virtual env 
+   
+  conda virtual environment for development
+  
+  pipenv for deployment
 
 ## 5. How to reproduce the project
 
@@ -99,8 +102,10 @@ Now go inside the project directory with the command:
 ```
 cd WK08-09-midterm-project
 ```
-**Development part of this project**, 
-Development part i.e. till training the models in Jupyter notebook, finding the best model and saving it, is done in a conda environment. If you want run the notebook localy, then you have to recreate the conda environment that I used for development. For this, you first have to install Anaconda on your system, if you have not done it already. Install it by following these instructions in this [Anaconda](https://www.anaconda.com/products/distribution) page. Site automatically detects the operating system and suggest the correct package.
+## Development part of this project
+
+
+Development part i.e. till training the models in Jupyter notebook, finding the best model and saving it, is done in a conda environment. If you want to run the notebook localy, then you have to recreate the conda environment that I used for development. For this, you first have to install Anaconda on your system, if you have not done it already. Install it by following these instructions in this [Anaconda](https://www.anaconda.com/products/distribution) page. This Site automatically detects the operating system and suggest the correct package.
 
 I have created a `environment.yml` dependency file by running the command `conda env export > environment.yml` inside my activated conda envirnment. You can now recreate this environment with the command:
 
@@ -125,7 +130,8 @@ python train.py
 ```
 You can also go to jupyter notebook `notebook.ipynb`, run it and play with it.
 
-**Deployment part of this project** 
+## Deployment part of this project
+
 Saved model is loaded and put inside a webservice called `subscription` using Flask (see `predict.py`). This service is then put inside a python virtual environment `pipenv`. In order to recreate this environment `Pipfile` and `Pipfile.lock` is provided. 
 
 If you haven't installed `pipenv` yet, you need to do it with:
@@ -153,7 +159,7 @@ Make a request by running below command in another terminal.
 python predict-test.py
 ``` 
 
-After Docker container is built, it can be deployed to the cloud.
+After Docker container is built, it can be deployed to the cloud. 
 
 ### Deploying the docker container to the cloud with AWS Elastic Beanstalk
 
@@ -175,9 +181,9 @@ pipenv shell
 ```
 
 - Use the service with the following command: 
-`$ eb init -p docker -r eu-west-1 subscription-serving` 
+`$ eb init -p docker -r us-east-1 subscription-serving` 
 
-Use your preferred region. I have used `eu-west-1`.
+Use your preferred region. I have used `us-east-1`.
 
 If it is your first time, then it will ask for your `aws-acccess-id` and `aws-secret-key`. Enter them and wait till it says `Application subscription-serving has been created.`
 
@@ -197,7 +203,10 @@ eb create subscription-serving-env
 
 It takes some time. We'll see `Application available at .....address` on the terminal. Copy this addres and paste into `url` variable in `predict-test.py`. 
 
-- Run `python predict-test.py` on our terminal and we get our prediction result in the terminal.
+- Run `python predict-test.py` on your terminal and get the prediction result in the terminal.
+
+![Imgur](https://i.imgur.com/1BcKlad.png)
+Figure: Screenshot of prediction about a customer ran on host address url `http://subscription-serving-env.eba-meke3qbg.us-east-1.elasticbeanstalk.com/predict`.
 
 **Important:**  For security reasons, subscription-service in the cloud is stopped. It has been taken down. Below you can see a video me interacting with of the running service.
 
@@ -212,7 +221,7 @@ Also a screenshot of the service running in the cloud can be seen below:
 ## 6. Conclusions
 
 - 4 models: logistic regression, decision tree, random forest and XGboost were trained on the dataset
-- parameter tuning was done foreach model
+- parameter tuning was done for each model
 - XGboost model is found to be the best performing model with an ROC AUC score of 0.941
 
 ## 7. References
