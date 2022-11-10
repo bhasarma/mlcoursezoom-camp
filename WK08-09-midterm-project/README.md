@@ -11,9 +11,8 @@ This repository contains the project carried out during the midterm project of o
 
 1. Business Problem Description
 2. About the Dataset
-3. About files in this project repo
-3. Project Workflow
-4. Steps to run the application 
+3. About files and folders in this repo
+4. Project Workflow 
 5. Conclusions
 6. Contact
 
@@ -24,7 +23,20 @@ Banks are the most influential financial institutions of our time. They make rev
 
 ## 2. About the dataset
 
-The dataset has 18 features and 45211 rows. In the table below, meaning of each feature is written
+The dataset has 18 features and 45211 rows.
+
+
+- You can get the dataset from [kaggle](https://www.kaggle.com/datasets/aslanahmedov/predict-term-deposit)
+
+ - or, from this wget-able [link](https://raw.githubusercontent.com/bhasarma/mlcoursezoom-camp/main/WK08-09-midterm-project/predict-term-deposit-data.csv):
+ 
+ ```
+ wget https://raw.githubusercontent.com/bhasarma/mlcoursezoom-camp/main/WK08-09-midterm-project/predict-term-deposit-data.csv
+ ```
+ 
+ In case, your are running this `bash` command inside a Jupyter Notebook instead of a termical, don't forget to put a `!` before `wget`. No space needed between `!` and `wget`
+
+In the table below, meaning of each feature is written.
 
 
 |  Feature Name  |             Description             |  Datatype  |
@@ -48,9 +60,9 @@ The dataset has 18 features and 45211 rows. In the table below, meaning of each 
 | **poutcome**  |  outcome of previous marketing campaign | string: unknown, other, failure and success  |
 | **y**  |  target variable, has the client subscribed to a term deposit product? | binary: yes or no |
 
-*In the table above almost all features are self explanatory, except `day` and `month`.  Both the features together mean, last contact date e.g. a `day = 2`, and `month = may` would mean, customer was contacted last on 2nd May. We don't know the year, but it is not relevant for our training. 
+*`day` and `month`, both the features together mean, last contact date e.g. a `day = 2`, and `month = may` would mean, customer was contacted last on 2nd May. We don't know the year, but it is not relevant for our training. 
 
-## 3. About files in this project repo
+## 3. About files and folders in this repo
 
 |  File name |      Description       |
 |:--------:|:-----------------------------------:|
@@ -59,11 +71,13 @@ The dataset has 18 features and 45211 rows. In the table below, meaning of each 
 |    **notebook.ipynb**   |  Jupyter notebook file where all EDA, training different models, hyperparameterization etc. are carried out in development |
 |    **train.py**   |  python script that is converted from `notebook.ipynb` with only core logic and best model in it |
 |    **model.bin**   |  saved model which is obtained as output of `train.py` |
-|    **predict.py**   |  python script that loads the model and puts in a Flask web service app called `subscription`|
-|    **Pipfile**   |  python virtual environment management (pipenv) file with all the used packages and their versions listed|
-|    **Pipfile.lock**   |  python virtual environment management(pipenv) file specifying which specific version of the packages present in `Pipfile` should be used|
+|    **environment.yml**   |  dependency yaml file exported from the conda environement used for develpment |
+|    **predict.py**   |  python script that loads the model and puts in a Flask webservice app called `subscription`|
+|    **Pipfile**   |  python virtual environment management (pipenv) file with all the used packages and their versions listed (used for deployment)|
+|    **Pipfile.lock**   |  python virtual environment management(pipenv) file specifying which specific version of the packages present in `Pipfile` should be used (used for deployment)|
 |    **Dockerfile**   |  Dockerfile that is built to create docker container image|
 |    **predict-test.py**   |  python script that sends a request to the host in aws cloud with the customer information and returns subscription probability and whether the customer will subscribe to the term deposit|
+|    **dev_files**   |  A folder containing files used during development, but no longer relevant for deployment. Helpful to run locally to understand the project |
 
 
 ## Project workflow
@@ -194,10 +208,6 @@ It takes some time we'll see `Application available at .....address`. We copy th
 - [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
 
 ## Contacts
-for any feedback, question or suggestion, feel free to contact me below!<br>
-
-
-[<img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white" />](mailto:b.sarma1729@gmail.com)
-
+If you face problem in running any part of the project, contact me at `b.sarma1729[AT]gmail.com` or dm on slack channel `@Bhaskar Sarma`.
 
 Last but not the least, if you like the work, consider clicking on the ⭐
