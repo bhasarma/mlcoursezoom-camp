@@ -3,11 +3,8 @@
 
 import requests
 
-host = 'subscription-serving-env.eba-meke3qbg.us-east-1.elasticbeanstalk.com'
-url = f'http://{host}/predict'
+url = 'http://0.0.0.0:9696/predict'
 
-#use follwing url if you are running locally
-#url = 'http://0.0.0.0:9696/predict'
 
 customer = {
 
