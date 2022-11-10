@@ -223,6 +223,7 @@ Also a screenshot of the service running in the cloud can be seen below:
 - 4 models: logistic regression, decision tree, random forest and XGboost were trained on the dataset
 - parameter tuning was done for each model
 - XGboost model is found to be the best performing model with an ROC AUC score of 0.941
+- Best model was saved, loaded into a webservice using Flask and deployed to the AWS cloud. 
 
 ## 7. References
 
