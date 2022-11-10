@@ -12,9 +12,10 @@ This repository contains the project carried out during the midterm project of o
 1. Business Problem Description
 2. About the Dataset
 3. About files and folders in this repo
-4. Project Workflow 
-5. Conclusions
-6. Contact
+4. Project Workflow
+5. How to reproduce the project
+6. Conclusions
+7. References
 
 
 ## 1. Business Problem Description
@@ -80,134 +81,151 @@ In the table below, meaning of each feature is written.
 |    **dev_files**   |  A folder containing files used during development, but no longer relevant for deployment. Helpful to run locally to understand the project |
 
 
-## Project workflow
+## 4. Project workflow
 
 - Development system: 
    OS: Ubuntu 18.04.6 LTS
    Architecture: x86_64
    conda virtual env 
 
-There are different ways to interect with this project:
-   
-- If you want to play with `notebook.ipynb` file where all analysis of the dataset from importing data, exploraray data analysis to training different models are done, you can do it localy using the jupyter notebook. You need to install conda env and have jupyter notebook installed.
+## 5. How to reproduce the project
 
-- If you want to do test for one cutomer, you can do it on `notebook_without_output_test.ipynb` file. You can play here by changing variables of the customer and get a probabibility score. This is also the notebook, that is finally converted into a python script `train.py`
+In order to reproduce this project, first of all, clone this repo in your local machine with the command:
 
-- You can locally run  `train.py` and save the model with the command `python train.py`. An example of my CLI is below:
-
-```bash
-(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ conda activate ml-zoomcamp
-(ml-zoomcamp) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ ls
-customer.py  notebook.ipynb                      predict.py                     README.md
-model.bin    notebook_without_output_test.ipynb  predict-term-deposit-data.csv  train.py
-(ml-zoomcamp) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ python train.py 
-/home/bsarma/anaconda3/envs/ml-zoomcamp/lib/python3.9/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
-  warnings.warn(msg, category=FutureWarning)
-training the xgboost model with eta=0.1, max_depth=6 and min_child_weight=10
-Result of Final Gradient Boosting Model:
-ROC AUC score: 0.941
-the model is saved to model.bin
 ```
-- you can also run `predict_v1.py`, a file that loads the saved model and gives a probability as output. Its implementation is shown below:
-
-```bash
-(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ conda activate ml-zoomcamp
-(ml-zoomcamp) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ ls
-customer.py  notebook.ipynb                      predict.py                     predict_v1.py  train.py
-model.bin    notebook_without_output_test.ipynb  predict-term-deposit-data.csv  README.md
-(ml-zoomcamp) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$ python predict_v1.py 
-/home/bsarma/anaconda3/envs/ml-zoomcamp/lib/python3.9/site-packages/sklearn/utils/deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
-  warnings.warn(msg, category=FutureWarning)
-input: {'age': 25.0, 'job': 'blue-collar', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 11674.0, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 5, 'month': 'may', 'duration': 257, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'yes'}
+git clone  https://github.com/bhasarma/mlcoursezoom-camp/tree/main/WK08-09-midterm-project.git
 ```
-#### Webservices
-We create a webservice (called `subscription service`) using python framework Flask. This is basically where we turn `predict.py` into a webservice called `subscription`. 
+Now go inside the project directory with the command:
+```
+cd WK08-09-midterm-project
+```
+**Development part of this project**, 
+Development part i.e. till training the models in Jupyter notebook, finding the best model and saving it, is done in a conda environment. If you want run the notebook localy, then you have to recreate the conda environment that I used for development. For this, you first have to install Anaconda on your system, if you have not done it already. Install it by following these instructions in this [Anaconda](https://www.anaconda.com/products/distribution) page. Site automatically detects the operating system and suggest the correct package.
 
-1. This webservice can be run on from Jupyter Notebook (done in 5.4 video). We see that there is a warning ` WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead`.
+I have created a `environment.yml` dependency file by running the command `conda env export > environment.yml` inside my activated conda envirnment. You can now recreate this environment with the command:
 
-Therefore, inseatd of using plain flask we need to use WSGI server. There are many different WSGI servers available in python. We use gunicorn. Install it with `pip install gunicorn`.
+```
+conda env create -f environment.yml
+``` 
+You can check if the environment `ml-zoomcamp` is created by listing all the conda environment available with the command:
 
-Then run the app with the following commands:
-`$ gunicorn --bind 0.0.0.0:9696 predict:app`
-and open a jupyter notebook `predict-test.ipynb` to test predict app.
-This way we turned our Flask app into production-ready. This we'll use now for deplying our services.
+```
+conda info --envs
+```
+Activate the environment with:
 
-- `predict-test.py` is downloaded script from `predict-test.ipynb`
-Now we can in one terminal run `python predict.py` and in another terminal `python predict-test.py`. 
+```
+conda activate ml-zoomcamp
+```
 
+Now you should be able to run `train.py` and save the model localy with:
 
-**Python virtual env: pipenv**
-Subscription web service is put inside a python virtual environment  `pipenv`. 
-1. `pip install pipenv`
+```
+python train.py
+```
+You can also go to jupyter notebook `notebook.ipynb`, run it and play with it.
 
-2. `pipenv install numpy scikit-learn==0.24.2 flask gunicorn`
+**Deployment part of this project** 
+Saved model is loaded and put inside a webservice called `subscription` using Flask (see `predict.py`). This service is then put inside a python virtual environment `pipenv`. In order to recreate this environment `Pipfile` and `Pipfile.lock` is provided. 
 
-Now if we want to run our webservice: 
-1. activate this project's virtualenv, by runnin `pipenv shell`
-2. Then run `gunicorn --bind 0.0.0.0:9696 predict:app`
-
-In stead of running above two commands, you can also just write `pipenv run gunicorn --bind 0.0.0.0:9696 predict:app`. It does the same. 
-
-======
-Clone this repo and after cloning just do `pipenv install`. You are good to go.
- 
+If you haven't installed `pipenv` yet, you need to do it with:
+```
+pip install pipenv
+```
+Then you can recreate the environment by running the below command in the project directory:
+```
+pipenv install
+```
 ### Environment Management with Docker
-- build docker file with `docker build -t midterm-project .`
-- run the service with `docker run -it --rm -p 9696:9696 midterm-project:latest`
-- make a request with `python predict-test.py` in another terminal, of course in the same dir where the file is.
+Subscription-service app is then put inside a docker container (see `Dockerfile`). Before we can run a docker image, first it has to be built with the command:
 
+```
+docker build -t midterm-project
+```
 
+Then, run the service with 
+```
+docker run -it --rm -p 9696:9696 midterm-project:latest
+```
+Make a request by running below command in another terminal.
 
-### Deploying the docker container to the cloud with AWS EB
-As the final step, we deploy our docker container built in the previous step to the cloud. We use AWS Elastic Beanstalk for this work.
+```
+python predict-test.py
+``` 
 
-- if you don't have an account yet in AWS, you can create one by following the instructions in the article [creating an aws account](https://mlbookcamp.com/article/aws). In order to create an account, it asks for credit card information. However we are going to use only the free tier resources for this project.
+After Docker container is built, it can be deployed to the cloud.
+
+### Deploying the docker container to the cloud with AWS Elastic Beanstalk
+
+As the final step, we deploy our docker container built in the previous step to the cloud. 
+
+- if you don't have an account in AWS, you can create one by following the instructions in the article [creating an aws account](https://mlbookcamp.com/article/aws). In order to create an account, it asks for credit card information although, we are going to use only the free tier resources for this project.
 
 - create an EC2 instance on AWS following the instructions [here](https://mlbookcamp.com/article/aws-ec2).
 
-- Then install the special CLI for elastic beanstalk `awsebcli` in the pipenv of this project with the following commands in your terminal and in the directory where this project is. In my case it is `(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$`.
+- Install the special CLI for elastic beanstalk `awsebcli` inside the pipenv of this project with the following commands in your terminal and in the project directory. In my case e.g. it is `(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK08-09-midterm-project$`.
 
-command 1: `$ pipenv install awsebcli --dev`
+```
+pipenv install awsebcli --dev
+```
 
-command 2: Enter the pipenv environement with: 
-`$ pipenv shell`
+- Then enter the pipenv environement with: 
+```
+pipenv shell
+```
 
-Use the service with the following command: 
+- Use the service with the following command: 
 `$ eb init -p docker -r eu-west-1 subscription-serving` 
+
+Use your preferred region. I have used `eu-west-1`.
 
 If it is your first time, then it will ask for your `aws-acccess-id` and `aws-secret-key`. Enter them and wait till it says `Application subscription-serving has been created.`
 
 ### Testing if the server works locally
-We can first test, if the server works localy with the command:
+- We can first test, if the server works localy with the command:
 `$ eb local run --port 9696`.
-Test it by going to another terminal and running the script `python predict-test.py`
+
+- Test it by going to another terminal and running the script `python predict-test.py`
 
 ### Running the web service in the cloud
-Create an elastic beanstalk env by:
-`eb create churn-serving-env`
 
-It takes some time we'll see `Application available at .....address`. We copy this addres. Paste this into predict-test.py 
+- Create an elastic beanstalk env by:
 
-- run `python predict-test.py` on our terminal and we get our result in the terminal.
+```
+eb create subscription-serving-env
+```
 
-**Important:**  For security reasons, we are not running the service anymore. We have taken it down. Below you can see a video-scrennshot of the service running.
+It takes some time. We'll see `Application available at .....address` on the terminal. Copy this addres and paste into `url` variable in `predict-test.py`. 
+
+- Run `python predict-test.py` on our terminal and we get our prediction result in the terminal.
+
+**Important:**  For security reasons, subscription-service in the cloud is stopped. It has been taken down. Below you can see a video me interacting with of the running service.
 
 [Video link here](https://www.veed.io/view/ae183e54-8ab0-410b-8f22-86d60630d26c?panel=share)
 
-- terminate the service at the end by: `eb terminate subscription-serving-env`
+Also a screenshot of the service running in the cloud can be seen below:
 
-## Conclusions
+![Imgur](https://i.imgur.com/8OBzN08.png)
 
-- 4 models (logistic regression, decision tree, random forest and XGboost)  were trained on the dataset
-- Best model is: xx with accuracy of xx
+- Finally, don't forget to terminate the service at the end by: `eb terminate subscription-serving-env`
 
-## References
+## 6. Conclusions
+
+- 4 models: logistic regression, decision tree, random forest and XGboost were trained on the dataset
+- parameter tuning was done foreach model
+- XGboost model is found to be the best performing model with an ROC AUC score of 0.941
+
+## 7. References
 
 - [Github repository of the course Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp) 
 - [Youtube Playlist where course videos are hosted](https://www.youtube.com/playlist?list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR) 
 - [Photo by Monstera from Pexels](https://www.pexels.com/photo/cutout-paper-composition-of-bank-with-dollar-bills-5849548/)
 
 ## Contacts
-If you face problem in running any part of the project, contact me at `b.sarma1729[AT]gmail.com` or dm on slack channel `@Bhaskar Sarma`.
+If you face any problem in running any part of the project: 
+
+- contact me at `b.sarma1729[AT]gmail.com` or,
+
+- dm on DataTalks.Club slack `@Bhaskar Sarma`.
 
 Last but not the least, if you like the work, consider clicking on the ⭐
