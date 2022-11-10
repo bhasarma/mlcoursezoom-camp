@@ -208,7 +208,7 @@ It takes some time. We'll see `Application available at .....address` on the ter
 ![Imgur](https://i.imgur.com/1BcKlad.png)
 Figure: Screenshot of prediction about a customer ran on host address url `http://subscription-serving-env.eba-meke3qbg.us-east-1.elasticbeanstalk.com/predict`.
 
-**Important:**  For security reasons, subscription-service in the cloud is stopped. It has been taken down. Below you can see a video me interacting with of the running service.
+**Important:**  For security reasons, subscription-service in the cloud is stopped. It has been taken down. Below you can see a video me interacting with the running service.
 
 [Video link here](https://www.veed.io/view/ae183e54-8ab0-410b-8f22-86d60630d26c?panel=share)
 
