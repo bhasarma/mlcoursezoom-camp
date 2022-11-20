@@ -1,3 +1,5 @@
-In this lesson we'll talk about adjusting the learning rate for our model.
+Checkpointing is a way of saving our model after each **iteration** or, when certain conditions are met e.g. when model achieves the best performance so far.
 
-In previous lesson, we trained our first model. We used transferred learning. 
+In previous video, while tuning the parameter we noticed that the model oscillates. So perhaps it makes sense to save the model at iteration number 8. But, after training for 10 iterations, we get a model which is worser. With checkpointing we can save the best model. 
+
+The way checkpoints wrk is: we train our model for epochs from 1,2..10. At the end of each epoch, we evaluate the performance of each model on validation dataset. We do this after every epoch. So, we trained for one epoch for 96 iterations. After one epoch is over, we take the model, we apply to validation and we do this for each epoch. We can invoke `callback`, after the epoch is over and we can do anything we want. We can add more things using this mechanism. We invoke it aftere each epoch finishes. 
