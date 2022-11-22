@@ -1,10 +1,10 @@
 # 8. Neural Network and Deep Learning
 
-In this session, we'll talk about neural network and deep learning. In previous sesssions, we dealt with tabular data. Methods that we have used so far like linear regression, logistic regressions and tree based models: decision tree, random forest, xgboost can be used to model only tabular data. In this module, we will look at a different type of data, namely images. 
+In this session, we'll talk about neural network and deep learning. Till now, we have dealt with tabular data. Methods that we have used so far like linear regression, logistic regression and tree based methods: decision tree, random forest and xgboost can be used to model only tabular data. In this module, we will look at a different type of data, namely images. We'll look into the methods to train this type of data. 
 
 ## 8.1 Introduction to fashion classification
 
- In this module, we'll look at images of clothes. The task is to classifiy which type clothes is the image. It is a classification project (a multi-class classification). We'll build a model that tells if image belongs to one of 10 clothing categories. Use case we can have is: in a online classify website.
+ In this module, we'll look at images of clothes. The task is to classifiy which type of cloth is an image. It is a classification project (a multi-class classification). We'll build a model that tells us if an image belongs to one of 10 clothing categories. Use case is e.g. an online classify website. User comes to website and wants to create a listing for clothes. Goal is to make it easier for users.
  
  For this we'll have a service: fashion classification service. It'll contain a neural network model. This model will take an image as the input and predict category of the cloth in the image.
  
@@ -23,5 +23,5 @@ In this session, we'll talk about neural network and deep learning. In previous 
  
  For theory behind go to the following course from MIT: [https://cs231n.github.io/](https://cs231n.github.io/) 
  
- This course go in in detail for neural networks in particular for convolutional neural networks for visula recognition. Notes here are quite good. There are also videos.
+ This course go in in detail for neural networks in particular for convolutional neural networks for visual recognition. Notes here are quite good. There are also videos.
  
