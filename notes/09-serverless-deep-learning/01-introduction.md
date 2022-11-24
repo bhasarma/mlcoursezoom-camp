@@ -14,8 +14,58 @@ In the previous session, we trained a model. In this session we'll talk about ho
 
 One way of deploying this is by using  **AWS Lamda**. Lamda is a service from AWS that allows us to deploy many different things including machine learning models. 
 
-The way it works is: we have a picture of pants, we send this picture (url of this picture) to our model that we are going to deploy with AWS lamda, then the service we deploy with lamda will reply with many classes and one this class would be pants, then we'll have some scoresand then we'll respond to the user that you are seliing  a pant.
+The way it works is: we have a picture of pants, we send this picture (url of this picture) to our model that we are going to deploy with AWS lamda, then the service we deploy with lamda will reply with many classes and one this class would be pants, then we'll have some scores and then we'll respond to the user that you are seliing  a pant.
 
 This is what we are going to cover in this session. 
 
-We'll start with the model that we trained previously with keras. We'll use **tensorflow lite** internally for that. We'll talk about why tensoeflow-lite is better than plain tensorflow for this particular use case. That's the plan for this session.    
+- We'll start with the model that we trained previously with keras. 
+
+- We'll use **tensorflow lite** internally for that. 
+
+- We'll talk about why tensoeflow-lite is better than plain tensorflow for this particular use case. That's the plan for this session.    
+
+# 9- Serverless Deep Learning
+
+We'll deploy the clothes classification model that we trained previously.
+
+## 9.1 Introduction to Serverless
+
+* What we'll cover this week
+
+## 9.2 AWS Lamda
+
+* What is AWS Lamda
+* Difference between AWS Lamda and other approches
+* Serverless vs serverfull
+
+## 9.3 TensorFlow Lite
+
+* TensorFlow Lite as a alternative to TensorFlow
+* Why it is better for this use case
+
+* Why not TensorFLow
+* Converting the model
+* Using the TF-Lite model for making predictions
+
+## 9.4 Preparing the Lamda code
+
+* Moving the code from notebook to script
+* Testing it locally
+
+## 9.5 Preparing a Docker image
+
+*  Lamda base images
+* Preparing the Docker file
+* Using the right TF-Lite wheel
+
+## 9.6 Creating the lamda function
+
+* publishing the image to AWS ECR
+* Creating the function
+* Configuring it
+* Testing the function from the AWS Console
+* Pricing
+
+## 9.7 API Gateway
+
+* Creating and Configuring the Gateway
