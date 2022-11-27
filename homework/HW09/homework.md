@@ -116,6 +116,8 @@ Now let's apply this model to this image. What's the output of the model?
 * 0.60146114
 * 0.82448614
 
+### Answer to question 4
+`0.82448614` (look into homework09.ipynb file for reference)
 
 ## Prepare the lambda code 
 
