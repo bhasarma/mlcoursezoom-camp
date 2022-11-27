@@ -1,0 +1,17 @@
+ ACCOUNT = 546575206078
+ REGION = us-east-1
+ REGISTRY = clothing-tflite-images
+
+ PREFIX = ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${REGISTRY}
+
+ TAG = clothing-model-xception-v4-001
+ REMOTE_URI = ${PREFIX}:${TAG}
+
+
+######################
+REMOTE_URI = 546575206078.dkr.ecr.us-east-1.amazonaws.com/clothing-tflite-images:clothing-model-xception-v4-001
+
+#####################
+$ export REMOTE_URI=546575206078.dkr.ecr.us-east-1.amazonaws.com/clothing-tflite-images:clothing-model-xception-v4-001
+$ echo $REMOTE_URI
+546575206078.dkr.ecr.us-east-1.amazonaws.com/clothing-tflite-images:clothing-model-xception-v4-001
