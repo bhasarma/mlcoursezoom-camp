@@ -164,6 +164,14 @@ So what's the size of this base image?
 
 You can get this information when running `docker images` - it'll be in the "SIZE" column.
 
+### Answer to question 5
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/homework/HW09$ docker build -t mlzoomcamp-hw09 .
+
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/homework/HW09$ docker image ls -a
+
+svizor42/zoomcamp-dino-dragon-lambda                                  v2                               20ef58b21a05   9 days ago       639MB
+```
 
 ## Question 6
 
@@ -186,6 +194,25 @@ What's the output from the model?
 * 0.52
 * 0.72
 
+### Answer to question 6
+Step 1: build docker image with:
+
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/homework/HW09$ docker build -t mlzoomcamp-hw-serverless .
+```
+step2: run docker image with:
+
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/homework/HW09$ docker run -it --rm -p 8080:8080 mlzoomcamp-hw-serverless
+```
+
+step3: open a new terminal in the same dir where homework09.py, Dockerfile and test.py is. Then run test.py as below:
+
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/homework/HW09$ python test.py 
+{'prediction': 0.3195067048072815}
+```
+Thus answer is : `0.32`
 
 ## Publishing it to AWS
 
