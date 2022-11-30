@@ -1,6 +1,6 @@
 # 10.2 TensorFlow Serving
 
-In this session, we'll talk about tensorflow serving. In last session, we talked about overview of this module. There we had one component called **TF-serving**, the tool from tensorflow that can be used for serving model. For this, we first have to convert the model, that we trained previously with keras into a special format called `save_model`. 
+In this session, we'll talk about tensorflow serving. In last session, we talked about overview of this module. There we had one component called **TF-serving**, the tool from tensorflow that can be used for serving model. For this, we first have to convert the model, that we trained previously with **keras** into a special format called `saved_model`. 
 
 We'll do this step right now. 
 
@@ -202,7 +202,7 @@ Now we can use tensorflow-serving locally using this model.
 docker run -it --rm -p 8500:8500 -v "$(pwd)/clothing-model:/models/clothing-model/1" -e MODEL_NAME="clothing-model" tensorflow/serving:2.7.0
 ```
 
-Now let's try to send something to this model.
+Now let's try to send something to this model. We'll continue this part in the notebook `tf-serving-connect.ipynb` in this [link](https://github.com/bhasarma/mlcoursezoom-camp/blob/main/WK13-kubernetes-and-tensorflow-serving/tf-serving-connect.ipynb).
 
 
 
