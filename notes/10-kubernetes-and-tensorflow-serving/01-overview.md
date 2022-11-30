@@ -25,7 +25,7 @@ In this module, we'll mostly focus on creating these two services, deploying the
 ![Imgur](https://i.imgur.com/ToRfjIn.png)
 Figure 1: overview of this week's module containing two services: Gateway and TF-serving. These services will then be deployed and tesetd.
 
-Below are bullet points of what we'll cover in thsi module:
+Below are bullet points of what we'll cover in this module:
 
 ## 10.1 Overview
 - what we'll cover this week
