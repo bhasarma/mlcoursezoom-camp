@@ -2,7 +2,7 @@
 
 In this module, we'll talk about kubernetes and tensorflow serving.
 
-Let us imagine again the scenario that we have dealt with in the last two modules. We have a user, who uploads an image of a pant or a t-shirt or some clothe into a website to sell it. We want to build a system that automatically classify what type of cloth user has uploaded. 
+Let us imagine again the scenario that we have dealt with in the last two modules. We have a user, who uploads an image of a pant or a t-shirt or some cloth into a website to sell it. We want to build a system that automatically classify what type of cloth user has uploaded. 
 
 In this module, we'll use **tensorflow serving** for serving the model. This is a tool from the tensorflow family of tools, created specifically for serving tnesorflow models. 
 
@@ -16,7 +16,7 @@ Gateway will send the matrix to TF-serving. For communication between Gateway an
 
 For implementing the Gateway we'll use **Flask**. Since, TF-serving uses C++, we don't have much control over it. We just have to use c++. After this, we'll deploy everything, we created here to kubernetes.
 
-It might seem little complicated because we have two components: first one Gateway and then a second one TF-serving. First of all it is a necessity, because TF-serving expects input to be prepared. Secondly, there is an advanatage using TF-serving, because we can use GPU. But for Gateway, we can use a CPU. What Gateway is doing is downloading the images, resizes them. It turns this into umpy array. This is not very computationally expensive. 
+It might seem little complicated because we have two components: first one Gateway and then a second one TF-serving. First of all it is a necessity, because TF-serving expects input to be prepared. Secondly, there is an advanatage using TF-serving, because we can use GPU. But for Gateway, we can use a CPU. What Gateway is doing is downloading the images, resizes them. It turns this into numpy array. This is not very computationally expensive. 
 
 But in TF-serving we are applying the model to the image. For this it is doing lots of matrix multiplication and computations. These things can be run very fast on GPUs. But for a Gateway a cpu is enough. e.g. we can have 2 instances of TF-serving that will run on GPU and 5 instances of the Gateway that runs on CPUs. We can scale them independently, not to have lots of TF-serving instances, because it costs money to run on gpus. But for Gateway we don't need very powerful machines, but may be we need more of them. It is also useful to have such an architecture. We can scale these things indepnendently. One more thing Gateway is doing is postprocessing the output. We already have code for that, when we used the model for aws lambda. We can reuse most of this code.
 
