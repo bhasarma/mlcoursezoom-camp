@@ -14,7 +14,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 
-from proto import np_to_protobuf
+
 
 host = 'localhost:8500'
 
@@ -23,6 +23,10 @@ channel = grpc.insecure_channel(host)
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
 
 preprocessor = create_preprocessor('xception', target_size=(299,299))
+
+
+def np_to_protobuf(data):
+    return tf.make_tensor_proto(data, shape = data.shape)
 
 
 def prepare_request(X):
@@ -69,7 +73,7 @@ def predict_endpoint():
     return jsonify(result)
 
 if __name__=='__main__':
-    url = 'http://bit.ly/mlbookcamp-pants'
-    response = predict(url)
-    print(response)
-    #app.run(debug=True, host='0.0.0.0', port=9696)
+    # url = 'http://bit.ly/mlbookcamp-pants'
+    # response = predict(url)
+    # print(response)
+    app.run(debug=True, host='0.0.0.0', port=9696)

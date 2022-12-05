@@ -10,12 +10,6 @@ from tensorflow_serving.apis import prediction_service_pb2_grpc
 from keras_image_helper import create_preprocessor
 
 
-from flask import Flask
-from flask import request
-from flask import jsonify
-
-from proto import np_to_protobuf
-
 host = 'localhost:8500'
 
 channel = grpc.insecure_channel(host)
@@ -23,6 +17,10 @@ channel = grpc.insecure_channel(host)
 stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
 
 preprocessor = create_preprocessor('xception', target_size=(299,299))
+
+
+def np_to_protobuf(data):
+    return tf.make_tensor_proto(data, shape = data.shape)
 
 
 def prepare_request(X):
@@ -59,17 +57,7 @@ def predict(url):
     response = prepare_response(pb_response)
     return response
 
-app = Flask('gateway')
-
-@app.route('/predict', methods=['POST'])
-def predict_endpoint():
-    data = request.get_json()
-    url = data['url']
-    result = predict(url)
-    return jsonify(result)
-
 if __name__=='__main__':
     url = 'http://bit.ly/mlbookcamp-pants'
     response = predict(url)
     print(response)
-    #app.run(debug=True, host='0.0.0.0', port=9696)

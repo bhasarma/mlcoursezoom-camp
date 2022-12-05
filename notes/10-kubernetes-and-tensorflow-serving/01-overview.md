@@ -38,7 +38,8 @@ Below are bullet points of what we'll cover in this module:
 
 ## 10.3 Creating a Preprocessing Service
 - converting the notebook into a python script
-- wrapping the script into a Flask app
+- wrapping the script into a Flask app<br>
+- Putting everything into Pipenv(added later)
 
 ## 10.4 Running everything locally with Docker-compose
 - preparing the images
