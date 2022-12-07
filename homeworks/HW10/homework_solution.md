@@ -53,8 +53,18 @@ Here `<value>` is the probability of getting a credit card. You need to choose t
 * 0.769
 * 0.972
 
-Now you can stop the container running in Docker.
 
+
+### Answer to question 1
+
+```bash
+(ml-zoomcamp) bsarma@turing:~/GitHub/mlbookcamp-code/course-zoomcamp/cohorts/2022/05-deployment/homework$ python q6_test.py
+{'get_card': True, 'get_card_probability': 0.7692649226628628}
+```
+
+`0.769`
+
+Now you can stop the container running in Docker.
 
 ## Installing `kubectl` and `kind`
 
@@ -63,6 +73,32 @@ You need to install:
 * `kubectl` - https://kubernetes.io/docs/tasks/tools/ (you might already have it - check before installing)
 * `kind` - https://kind.sigs.k8s.io/docs/user/quick-start/
 
+**Installing kubectl**
+```bash
+bsarma@turing:~/GitHub/mlcoursezoom-camp/WK13-kubernetes-and-tensorflow-serving/ping$ cd
+(base) bsarma@turing:~$ cd /bin
+
+(base) bsarma@turing:~/bin$ curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.7/2022-10-31/bin/linux/amd64/kubectl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 43.6M  100 43.6M    0     0   879k      0  0:00:50  0:00:50 --:--:-- 2300k
+
+(base) bsarma@turing:~/bin$ ls
+docker-compose  kubectl
+(base) bsarma@turing:~/bin$ chmod +x kubectl
+```
+
+**Instaling Kind**
+Link: 
+
+```
+(base) bsarma@turing:~/bin$ wget https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 -O kind
+
+(base) bsarma@turing:~/bin$ chmod +x kind
+
+(base) bsarma@turing:~$ kind --version
+kind version 0.17.0
+```
 
 ## Question 2
 
@@ -70,6 +106,8 @@ What's the version of `kind` that you have?
 
 Use `kind --version` to find out.
 
+**Answer to question 2**
+`0.17.0`
 
 ## Creating a cluster
 
@@ -78,13 +116,45 @@ Now let's create a cluster with `kind`:
 ```bash
 kind create cluster
 ```
+- created cluster with:
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK13-kubernetes-and-tensorflow-serving/ping$ kind create cluster
+Creating cluster "kind" ...
+ ✓ Ensuring node image (kindest/node:v1.25.3) 🖼 
+ ✓ Preparing nodes 📦  
+ ✓ Writing configuration 📜 
+ ✓ Starting control-plane 🕹️ 
+ ✓ Installing CNI 🔌 
+ ✓ Installing StorageClass 💾 
+Set kubectl context to "kind-kind"
+You can now use your cluster with:
+
+kubectl cluster-info --context kind-kind
+
+Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 
+```
+Took some time abt. 8 mins to create it.
+
+```
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK13-kubernetes-and-tensorflow-serving/ping$ kubectl cluster-info --context kind-kind
+Kubernetes control plane is running at https://127.0.0.1:40183
+CoreDNS is running at https://127.0.0.1:40183/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
+```
 
 And check with `kubectl` that it was successfully created:
 
 ```bash
 kubectl cluster-info
 ```
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK13-kubernetes-and-tensorflow-serving/ping$ kubectl get service
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   5m55s
 
+```
 
 ## Question 3
 
@@ -96,6 +166,8 @@ in Kubernetes (`kind` in our case)?
 * Deployment
 * Service
 
+**Answer to question 3**
+`pod`
 
 ## Question 4
 
@@ -108,6 +180,15 @@ What's the `Type` of the service that is already running there?
 * LoadBalancer
 * ExternalName
 
+**Answer to question 4**
+
+```bash
+(base) bsarma@turing:~/GitHub/mlcoursezoom-camp/WK13-kubernetes-and-tensorflow-serving/ping$ kubectl get service
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   5m55s
+```
+
+Answer: `ClusterIP`
 
 ## Question 5
 
@@ -121,6 +202,9 @@ What's the command we need to run for that?
 * `kind load docker-image`
 * `kubectl apply`
 
+**Answer to question 5**
+
+`kind load docker-image`
 
 ## Question 6
 
@@ -159,6 +243,9 @@ Replace `<Image>`, `<Memory>`, `<CPU>`, `<Port>` with the correct values.
 
 What is the value for `<Port>`?
 
+**Answer to question 6**
+`containerPort: 9696`
+
 Apply this deployment using the appropriate command and get a list of running Pods. 
 You can see one running Pod.
 
@@ -182,6 +269,9 @@ spec:
 ```
 
 Fill it in. What do we need to write instead of `<???>`?
+
+**Answer to question 7**
+`credit-card`
 
 Apply this config file.
 
