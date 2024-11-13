@@ -26,7 +26,10 @@ we will look at a different type of data, namely images. We'll look into the met
  It is worth mentioning here that, in this module we'll put emphasis on practical part and we'll not go into theory behind neural networks. We'll see how to train 
  such models. 
  
- For theory behind go to the following course from MIT: [https://cs231n.github.io/](https://cs231n.github.io/) 
+ For theory behind go to the following course from Stanford: [https://cs231n.github.io/](https://cs231n.github.io/) 
  
- This course go in in detail for neural networks in particular for convolutional neural networks for visual recognition. Notes here are quite good. There are also videos.
+ This course go in detail for neural networks in particular for convolutional neural networks for visual recognition. Notes here are quite good. There are also videos.
+
+ ***keywords:**
+ Neural Network, Deep Learning and Image Classification.
  
