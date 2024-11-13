@@ -1,8 +1,8 @@
 # 8.2 Tensorflow and Keras
 
-Tensorflow is a library (more like a framework) for doing deeplearning. It is an end-to-end open source machine learning platform.  It can do other things, but main focus for this library is deep learning. So, Tensorflow is a library for training deep learning models. 
+**Tensorflow** is a library (more like a framework) for doing deeplearning. In addition to it, there are several popular libraries and frameowrks for deep learning. Some of them are: PyTorch, Keras, FastAI, OpenCV's DNN module etc. Tensorflow is an end-to-end open source machine learning platform.  This means, it offers everything needed for the entire machine learning workflow, from data handling to model deployment and monitoring in one unified ecosystem.  Main focus for this library is deep learning. So, Tensorflow is a library for training deep learning models.
 
-Keras is a higher level abstraction on top of tensorflow. Inside Tensorflow, we have Keras, which is a libraray. It provides higher level abstraction which helps to create, train and use neural networks. Officila website of tensorflow is: [https://www.tensorflow.org/] (https://www.tensorflow.org/).
+**Keras** is a higher level abstraction on top of tensorflow. Inside Tensorflow, we have Keras, which is a libraray. It provides higher level abstraction which helps to create, train and use neural networks. Officila website of tensorflow is: [https://www.tensorflow.org/] (https://www.tensorflow.org/).
 
 **Installing Tensorflow**
 Tensorflow doesn't come with Anaconda. If we use Anaconda, we don't have tensorflow.
@@ -28,6 +28,12 @@ On your local computer, if you don't have a GPU, you install it as above written
 
 Keras used to be a separate library from TensorFlow. Sometime it got absorbed into TensorFlow. If on some online tutorial, you see that `keras.preprocessing.image` then just put a `tensorflow.` before. From TensorFlow version `2.0` it is true. We should use atleast a `2.0` version of TensorFlow.
 
-The libraray for processing images is PIL, stands for python image libraray. Many libraries use this for processing images. 
+The libraray for processing images is **PIL**, stands for python image libraray. Many libraries use this for processing images. 
 
 - dtype=uint8 means unsigned. SO it goes from 0 t 255, not from -127 to 128, but from 0 to 255. int8 means that it is an integer that takes 8 bits or 1 byte. 
+
+Reference:<br>
+- https://www.youtube.com/watch?v=R6o_CUmoN9Q&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=71
+
+***keywords:***<br>
+Tensorflow, Keras and PIL.
