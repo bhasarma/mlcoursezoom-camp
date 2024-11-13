@@ -30,6 +30,6 @@ we will look at a different type of data, namely images. We'll look into the met
  
  This course go in detail for neural networks in particular for convolutional neural networks for visual recognition. Notes here are quite good. There are also videos.
 
- ***keywords:**
+ ***keywords:***
  Neural Network, Deep Learning and Image Classification.
  
